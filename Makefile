@@ -1,0 +1,3 @@
+go:
+	npm run dev
+
