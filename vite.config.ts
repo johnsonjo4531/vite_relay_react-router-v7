@@ -7,4 +7,27 @@ import graphql from "@rollup/plugin-graphql";
 
 export default defineConfig({
   plugins: [graphql(), tailwindcss(), reactRouter(), tsconfigPaths(), relay],
+  ssr: {
+    noExternal: [/^relay-runtime(?:\/|$)/, /react-relay(?:\/|$)/],
+    optimizeDeps: {
+      include: [
+        "relay-runtime",
+        "relay-runtime/experimental",
+        "react-relay",
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+      ],
+    },
+  },
+  optimizeDeps: {
+    include: [
+      "relay-runtime",
+      "relay-runtime/experimental",
+      "react-relay",
+      "react",
+      "react-dom",
+      "react/jsx-runtime",
+    ],
+  },
 });
