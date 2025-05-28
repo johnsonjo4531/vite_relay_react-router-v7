@@ -1,5 +1,12 @@
 # Relay and React Router v7 (Framework mode) Example
 
+## More info/discussion
+
+[See Here](https://github.com/remix-run/react-router/discussions/13085)
+
+## About
+
+
 I finally got React Router v7 working with framework mode thanks to help from discord.
 
 The main thing that helped it finally work was changing the vite config to have optimizeDeps and noExternal
